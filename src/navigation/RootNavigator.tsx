@@ -3,7 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { ActivityIndicator, View, StyleSheet } from 'react-native';
 import { useAuthStore } from '../store/authStore';
 import { AuthNavigator } from './AuthNavigator';
-import { HomeScreen } from '../screens/HomeScreen';
+import { MainNavigator } from './MainNavigator';
 
 export const RootNavigator: React.FC = () => {
   const { user, loading, initialized, initialize } = useAuthStore();
@@ -22,7 +22,7 @@ export const RootNavigator: React.FC = () => {
 
   return (
     <NavigationContainer>
-      {user ? <HomeScreen /> : <AuthNavigator />}
+      {user ? <MainNavigator /> : <AuthNavigator />}
     </NavigationContainer>
   );
 };
