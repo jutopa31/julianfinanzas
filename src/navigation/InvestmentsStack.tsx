@@ -1,5 +1,5 @@
 import React from 'react';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createStackNavigator } from '@react-navigation/stack';
 import InvestmentsListScreen from '@/screens/investments/InvestmentsListScreen';
 import InvestmentFormScreen from '@/screens/investments/InvestmentFormScreen';
 
@@ -8,7 +8,7 @@ export type InvestmentsStackParamList = {
   InvestmentForm: { id?: string } | undefined;
 };
 
-const Stack = createNativeStackNavigator<InvestmentsStackParamList>();
+const Stack = createStackNavigator<InvestmentsStackParamList>();
 
 export default function InvestmentsStack() {
   return (
@@ -22,4 +22,3 @@ export default function InvestmentsStack() {
     </Stack.Navigator>
   );
 }
-

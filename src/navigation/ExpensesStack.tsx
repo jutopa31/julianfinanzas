@@ -1,5 +1,5 @@
 import React from 'react';
-import { createNativeStackNavigator } from '@react-navigation/stack';
+import { createStackNavigator } from '@react-navigation/stack';
 import ExpensesListScreen from '@/screens/expenses/ExpensesListScreen';
 import ExpenseFormScreen from '@/screens/expenses/ExpenseFormScreen';
 import ExpenseRecordsScreen from '@/screens/expenses/ExpenseRecordsScreen';
@@ -10,7 +10,7 @@ export type ExpensesStackParamList = {
   ExpenseRecords: undefined;
 };
 
-const Stack = createNativeStackNavigator<ExpensesStackParamList>();
+const Stack = createStackNavigator<ExpensesStackParamList>();
 
 export default function ExpensesStack() {
   return (
@@ -21,4 +21,3 @@ export default function ExpensesStack() {
     </Stack.Navigator>
   );
 }
-

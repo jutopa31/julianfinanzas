@@ -1,5 +1,5 @@
 import React from 'react';
-import { createNativeStackNavigator } from '@react-navigation/stack';
+import { createStackNavigator } from '@react-navigation/stack';
 import IncomeListScreen from '@/screens/income/IncomeListScreen';
 import IncomeFormScreen from '@/screens/income/IncomeFormScreen';
 
@@ -8,7 +8,7 @@ export type IncomeStackParamList = {
   IncomeForm: { id?: string } | undefined;
 };
 
-const Stack = createNativeStackNavigator<IncomeStackParamList>();
+const Stack = createStackNavigator<IncomeStackParamList>();
 
 export default function IncomeStack() {
   return (
@@ -18,4 +18,3 @@ export default function IncomeStack() {
     </Stack.Navigator>
   );
 }
-

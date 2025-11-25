@@ -1,5 +1,5 @@
 import React from 'react';
-import { createNativeStackNavigator } from '@react-navigation/stack';
+import { createStackNavigator } from '@react-navigation/stack';
 import useAuth from '@/hooks/useAuth';
 import LoadingView from '@/components/common/LoadingView';
 import LoginScreen from '@/screens/auth/LoginScreen';
@@ -12,7 +12,7 @@ export type RootStackParamList = {
   App: undefined;
 };
 
-const Stack = createNativeStackNavigator<RootStackParamList>();
+const Stack = createStackNavigator<RootStackParamList>();
 
 export default function RootNavigator() {
   const { session, loading } = useAuth();

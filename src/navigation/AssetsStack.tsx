@@ -1,5 +1,5 @@
 import React from 'react';
-import { createNativeStackNavigator } from '@react-navigation/stack';
+import { createStackNavigator } from '@react-navigation/stack';
 import AssetsListScreen from '@/screens/assets/AssetsListScreen';
 import AssetFormScreen from '@/screens/assets/AssetFormScreen';
 
@@ -8,7 +8,7 @@ export type AssetsStackParamList = {
   AssetForm: { id?: string } | undefined;
 };
 
-const Stack = createNativeStackNavigator<AssetsStackParamList>();
+const Stack = createStackNavigator<AssetsStackParamList>();
 
 export default function AssetsStack() {
   return (
@@ -18,4 +18,3 @@ export default function AssetsStack() {
     </Stack.Navigator>
   );
 }
-
