@@ -123,7 +123,7 @@ export default function InvestmentFormScreen({ route, navigation }: Props) {
       <Controller
         control={control}
         name="current_value"
-        render(({ field: { onChange, value }, fieldState: { error } }) => (
+        render={({ field: { onChange, value }, fieldState: { error } }) => (
           <View style={{ marginBottom: 12 }}>
             <TextInput
               label="Valor actual"
@@ -136,7 +136,7 @@ export default function InvestmentFormScreen({ route, navigation }: Props) {
               {error?.message}
             </HelperText>
           </View>
-        ))}
+        )}
       />
 
       <Controller
